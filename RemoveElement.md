@@ -9,7 +9,7 @@
 你的函数应该返回 长度 = 2，数组的前两个元素是 2。  
 ```
 ## 代码
-```
+```ruby
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
@@ -45,7 +45,7 @@ for (int i = 0; i<numsSize; i++)
 Emmmmmmmmmm，然而别人用三行搞定了这个问题，只需要用i和j从前往后遍历数组就行了。  
 以后做完题一定要找找更好的办法，寻找改进的空间。
 ## 他山之石
-```
+```ruby
 class Solution {  
 public:  
     int removeElement(vector<int>& nums, int val) {  
