@@ -10,9 +10,10 @@
 原本的方法是用了三个循环找出那个数，就比较浪费时间。
 感受到位运算的奇妙之处。
 ## 好的方法
-class Solution {  
-public:  
-    int singleNumber(vector<int>& nums) {  
+```ruby
+class Solution {  
+public:  
+    int singleNumber(vector<int>& nums) {  
         int length = nums.size();  
     int result = 0 ;  
     for (int i=0; i<length; i++)  
@@ -22,7 +23,9 @@ public:
     return result;  
     }  
 }; 
-## 代码
+```
+## 坏的方法
+```ruby
 int singleNumber(int* nums, int numsSize) {
         for(int i=0;i<numsSize;i++)
             for(int j=0;j<numsSize;j++)
@@ -36,3 +39,4 @@ int singleNumber(int* nums, int numsSize) {
                 return nums[i];
     return 0;
 };
+```
