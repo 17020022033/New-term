@@ -1,4 +1,4 @@
-# 278.
+# 278.First Bad Version
 ## 题目
 You are a product manager and currently leading a team to develop a new product.   
 Unfortunately, the latest version of your product fails the quality check.  
@@ -39,7 +39,7 @@ public:
 };
 ```
 ## 递归
-```
+```ruby
 int recurbinary(int *a, int key, int low, int high)
 {
     int mid;
