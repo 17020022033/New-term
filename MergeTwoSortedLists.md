@@ -20,6 +20,8 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+```
+```ruby
 class Solution {
 public:
    ListNode *mergeTwoLists(ListNode *l1, ListNode *l2)  
