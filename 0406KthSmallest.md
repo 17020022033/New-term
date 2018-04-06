@@ -17,7 +17,9 @@ k = 8,
 ## 思路
 这道题直观的方法是遍历一次放到新容器里，然后排序再直接返回第k个数。     
 sort默认是从小到大排序所以compare函数都省了。      
-另一种办法是…别人的办法。用一个容器来存前k小的值，这样直接返回最后一个元素就好。     
+另一种办法是…别人的办法。
+因为用的容器没见过，就放了进来。    
+用一个容器来存前k小的值，这样直接返回最后一个元素就好。     
 遍历一次矩阵，如果当前容器比k小，就把当前值放进去。    
 如果不，就看看最后一个值是不是比矩阵当前值要小，是的话就break。  
 不是的话就把最后一个值存进去，删掉顶部的值。
@@ -41,20 +43,20 @@ public:
 class Solution {
 public:
     int kthSmallest(vector<vector<int>>& matrix, int k) {
-    vector<int> result;
-        for(int i=0;i<matrix.size();i++)
-            for(int j=0;j<matrix[0].size();j++)
-            {
-                if(result.size()<k)
-                    result.push_back(matrix[i][j]);
-                else
-                {
-                    if(result.back() <= matrix[i][j]) 
-                        break;  
-                    
+        priority_queue<int> heap;
+        for(int i=0; i<matrix.size(); ++i) {
+            for(int j=0; j<matrix[0].size(); ++j) {
+                if(heap.size() < k) heap.push(matrix[i][j]);
+                else {
+                    if(heap.top() <= matrix[i][j]) break;
+                    else {
+                        heap.push(matrix[i][j]);
+                        heap.pop();
+                    }
                 }
             }
- return result.back();   
+        }
+        return heap.top();
     }
 };
 ```
