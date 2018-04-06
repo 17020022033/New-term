@@ -51,11 +51,7 @@ public:
                 {
                     if(result.back() <= matrix[i][j]) 
                         break;  
-                    else 
-                    {  
-                        result.push_back(matrix[i][j]);  
-                        result.pop_back();  
-                    }  
+                    
                 }
             }
  return result.back();   
