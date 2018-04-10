@@ -21,7 +21,8 @@ right先把它设置为最右边的和left相同的元素。
 然后再找right和left之间有没有相同的然后比当前right更右的元素。遍历一下。有的话就把right移过去。    
 如果没有的话，right就是当前片段结束的位置。       
 如果可以结束，就用tmp放left和right之间的距离，然后把它放进result里面。      
-然后移动片段开始的地方。最后返回result就行了。      
+然后移动片段开始的地方。最后返回result就行了。         
+find_last_of可以直接定位到字符串里最后一个该元素。         
 ## 代码
 ```ruby
 class Solution {
@@ -51,6 +52,4 @@ public:
         return result;
     }
 };
-
-
 ```
