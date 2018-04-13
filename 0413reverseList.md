@@ -13,6 +13,7 @@ slow指针就用来放尾巴，就是已经反转好的部分。
 如果不符合，就最后让middle再指向新尾巴那串反转好的部分，然后返回掉这串反转好的代码。       
 ## 代码
 ```ruby
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
