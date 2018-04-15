@@ -23,13 +23,16 @@ public:
         int total = 0;
         vector<int> result;
         int temp = num;
+        
         while(temp!=0)
         {
             result.push_back(temp % 10);
             temp= temp/10;
         }
+        
         int a=result.size();
         reverse(result.begin(),result.end());
+        
         for(int i=0; i<a; i++)
         {
             int max = result[i];
